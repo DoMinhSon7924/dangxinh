@@ -1,0 +1,80 @@
+body{
+  margin:0;
+  overflow:hidden;
+  background:#000;
+  font-family:Segoe UI,sans-serif
+}
+#canvas-container{
+  width:100%;
+  height:100vh
+}
+#camera-preview{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  width:120px;
+  height:90px;
+  border:2px solid rgba(255,105,180,.6);
+  transform:scaleX(-1);
+  opacity:.9;
+  border-radius:8px;
+  background:#000
+}
+#help-btn{
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  width:44px;
+  height:44px;
+  cursor:pointer;
+  z-index:50
+}
+#help-overlay{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,192,203,.35);
+  backdrop-filter:blur(6px);
+  z-index:100;
+  animation:fadeIn .25s ease forwards
+}
+.help-modal{
+  background:#fff;border-radius:18px;
+  padding:14px;
+  max-width:min(92vw,420px);
+  max-height:88vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;transform:scale(.85);
+  opacity:0;
+  animation:popIn .35s cubic-bezier(.25,.8,.25,1) forwards
+}
+.help-modal img{
+  max-width:100%;
+  max-height:68vh;
+  object-fit:contain;
+  border-radius:14px
+}
+#help-close{
+  background:#ff7abf;
+  color:#fff;
+  border:none;
+  border-radius:999px;padding:8px 24px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer
+}
+@keyframes popIn{to{transform:scale(1);opacity:1}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+#error-log{
+  display:none;
+  position:absolute;
+  top:0;left:0;
+  color:red;
+  background:rgba(0,0,0,.8);
+  z-index:999;
+  padding:10px
+}

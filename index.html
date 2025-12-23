@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Lang Hạnh Trương ngố bel</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="error-log"></div>
+<div id="canvas-container"></div>
+<video class="input_video" style="display:none"></video>
+<canvas id="camera-preview"></canvas>
+<img src="./help.png" id="help-btn">
+<div id="help-overlay">
+<div class="help-modal">
+<img src="./guide.png">
+<button id="help-close">Đóng</button>
+</div>
+</div>
+<script src="./script.js" defer></script>
+</body>
+</html>
